@@ -1,0 +1,78 @@
+
+/* headerエリア -----------------------*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;               /* 横並びにする */
+    align-items: center;         /* 縦位置を中央に揃える */
+    justify-content: space-between; /* 両端に配置する場合。中央揃えなら 'center' */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.header h1 {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 2rem;
+    margin: 0;
+}
+
+
+
+
+.nav-links {
+    display: flex;
+    gap: 10px; /* h2同士の間隔を8pxに設定 */
+
+}
+
+.nav-links h2 {
+    margin: 20px;
+    font-size: 1rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    transition: color 0.3s ease;
+
+}
+
+
+.header h1:hover,
+.header h2:hover {
+    color: #007BFF; /* 好きな色に変更（例：青） */
+    cursor: pointer; /* カーソルが変わって「クリックできそう」な印象に */
+}
+
+
+/* mainエリア -----------------------*/
+.main {
+    height: 2100px;
+    background: linear-gradient(45deg, #030303, #03030366);
+    padding-top: 100px; /* ヘッダーの高さと同じくらい */
+}
+
+.dela-gothic-one-regular {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.noto-sans-jp-uniquifier {
+                   font-family: "Noto Sans JP", sans-serif;
+                   font-optical-sizing: auto;
+                   font-weight: 1;
+                   font-style: normal;
+               }
+
+.something-wrapper {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;   /* 横並びから縦並びに */
+        align-items: center;      /* 中央揃え */
+    }
+}
